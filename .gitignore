@@ -1,1 +1,10 @@
-github
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite3
+.env
+*.egg-info/
+dist/
+build/
+.venv/
+venv/

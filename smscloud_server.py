@@ -1,4 +1,4 @@
-# start_recovery_server.py
+# smscloud_server.py
 import subprocess
 import sys
 import os
@@ -14,7 +14,7 @@ def start_recovery_server():
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.bind(('localhost', 8001))
         sock.close()
-    except:
+    except OSError:
         print(f"❌ Port 8001 is already in use!")
         print("   Please close any application using port 8001")
         sys.exit(1)
