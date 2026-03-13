@@ -11,6 +11,9 @@ class SQLiteCloudClient:
         
     def connect(self):
         """Establish connection to SQLiteCloud"""
+        if not self.connection_string:
+            print("SQLITECLOUD_CONNECTION_STRING environment variable is not set")
+            return False
         try:
             self.conn = sqlitecloud.connect(self.connection_string)
             return True
